@@ -10,6 +10,8 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
 header {
@@ -17,7 +19,6 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(images/background-image.jpg);
   background-size: cover;
-  color: #fff;
 }
 
 .nav-container {
@@ -48,8 +49,9 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.sign-in-btn:hover, .sign-in-btn:active {
- background-color: #C50812;
+.sign-in-btn:hover,
+.sign-in-btn:active {
+  background-color: #c50812;
 }
 
 .header-text-container {
@@ -121,10 +123,41 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover, .cta-button:active {
-  background-color: #C50812;
- }
+.cta-button:hover,
+.cta-button:active {
+  background-color: #c50812;
+}
 
 .cta-icon {
   padding-left: 1.2rem;
+}
+
+.movie-section {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.movie-section-text {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin-bottom: 1.8rem;
+}
+
+.selects {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.select {
+  width: 100%;
+  height: auto;
+  padding: 10px 15px;
+  background-color: #141414;
+  color: #fff;
+  font-size: 1.8rem;
 }

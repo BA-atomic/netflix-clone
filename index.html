@@ -14,7 +14,11 @@
   <body>
     <header>
       <nav class="nav-container">
-        <img src="images/Netflix_Logo.png" alt="Netflix clone" class="neflix-logo">
+        <img
+          src="images/Netflix_Logo.png"
+          alt="Netflix clone"
+          class="neflix-logo"
+        />
         <div>
           <button class="sign-in-btn">Sign In</button>
         </div>
@@ -36,11 +40,38 @@
               placeholder="Enter address"
               class="email"
             />
-            <button class="cta-button">Get Started <span class="cta-icon">></span></button>
+            <button class="cta-button">
+              Get Started <span class="cta-icon">></span>
+            </button>
           </div>
         </div>
       </div>
     </header>
+
+    <main>
+      <section class="movie-section">
+        <div class="container">
+          <p class="movie-section-text">Trending Now</p>
+          <div class="selects">
+            <div>
+              <select name="select-where" id="select-where" class="select">
+                <option class="option" value="nigeria">Nigeria</option>
+                <option class="option" value="global">Global</option>
+              </select>
+            </div>
+
+            <div>
+              <div>
+                <select name="select-genre" id="select-genre" class="select">
+                  <option class="option" value="movies">Movies</option>
+                  <option class="option" value="shows">TV Shows</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
