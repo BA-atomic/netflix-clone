@@ -153,31 +153,31 @@ h2 {
   gap: 3rem;
 }
 
-.select-container {
-  position: relative;
-}
-
 .select {
   width: 100%;
   height: auto;
   padding: 1rem 3rem 1rem 1rem;
   background-color: #141414;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   border-radius: 0.5rem;
   appearance: none;
 }
 
-/* .select-arrow {
+.select-container {
+  position: relative;
+}
+
+.select-container::after {
+  content: '▼';
   position: absolute;
+  top: 50%;
   right: 10px;
-  top: 50%;
-} */
-.icon {
-  font-size: 6px;
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  width: 32px;
-  height: 32px;
+  font-size: 8px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.slider-container {
+  display: none;
 }
