@@ -1,4 +1,4 @@
-const sliderContainer = document.querySelector('.slider-container');
+const slider = document.querySelector('.slider');
 
 async function fetchData() {
   const randomNumber = Math.floor(Math.random() * 500) + 1;
@@ -36,22 +36,20 @@ function getTenRandomMovies(array, size) {
 }
 
 function displayMovies(movies) {
-  sliderContainer.style.display = 'block';
-  sliderContainer.innerHTML = '';
+  slider.style.display = 'block';
+  slider.innerHTML = '';
 
   movies.forEach((movie) => {
     const innerSliderContainer = document.createElement('div');
+    const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
     const poster = movie.poster_path
-    ? `https://image.tmdb.org/t/p/w500}${movie.poster_path}`
-    : 'https://via.placeholder.com/200x300?text=No+Image';
-   
+      ? `${POSTER_BASE_URL}${movie.poster_path}`
+      : 'https://via.placeholder.com/200x300?text=No+Image';
+
     innerSliderContainer.innerHTML = `
-        <div>
           <img src="${poster}"/>
-          <p>${movie.title}</p>
-        </div>
         `;
-    sliderContainer.appendChild(innerSliderContainer);
+    slider.appendChild(innerSliderContainer);
   });
 }
 
@@ -59,6 +57,4 @@ async function main() {
   const movies = await fetchData();
   displayMovies(movies);
 }
-
-// Run the main function on page load
 main();
