@@ -36,11 +36,11 @@ function getTenRandomMovies(array, size) {
 }
 
 function displayMovies(movies) {
-  slider.style.display = 'block';
   slider.innerHTML = '';
 
   movies.forEach((movie) => {
     const innerSliderContainer = document.createElement('div');
+    innerSliderContainer.classList.add("image-div")
     const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
     const poster = movie.poster_path
       ? `${POSTER_BASE_URL}${movie.poster_path}`
