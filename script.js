@@ -1,4 +1,6 @@
 const slider = document.querySelector('.slider');
+const nextBtn = document.querySelector('.next-btn');
+const images = document.querySelector('.image-div');
 
 async function fetchData() {
   const randomNumber = Math.floor(Math.random() * 500) + 1;
@@ -40,7 +42,7 @@ function displayMovies(movies) {
 
   movies.forEach((movie) => {
     const innerSliderContainer = document.createElement('div');
-    innerSliderContainer.classList.add("image-div")
+    innerSliderContainer.classList.add('image-div');
     const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
     const poster = movie.poster_path
       ? `${POSTER_BASE_URL}${movie.poster_path}`

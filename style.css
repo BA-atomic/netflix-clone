@@ -206,7 +206,7 @@ h2 {
   border-radius: 0.5rem;
 }
 
-.prev-btn {
+.next-btn {
   position: absolute;
   top: 50%;
   right: -4rem;
@@ -215,4 +215,9 @@ h2 {
   background-color: #141414;
   transform: translateY(-50%);
   border-radius: 0.5rem;
+}
+
+.next-btn:hover,
+.nextBtn:active {
+  background-color: #333;
 }
