@@ -1,6 +1,6 @@
 const slider = document.querySelector('.slider');
+const sliderContainer = document.querySelector('.slider-container');
 const nextBtn = document.querySelector('.next-btn');
-const images = document.querySelector('.image-div');
 
 async function fetchData() {
   const randomNumber = Math.floor(Math.random() * 500) + 1;
@@ -38,7 +38,7 @@ function getTenRandomMovies(array, size) {
 }
 
 function displayMovies(movies) {
-  slider.innerHTML = '';
+  sliderContainer.innerHTML = '';
 
   movies.forEach((movie) => {
     const innerSliderContainer = document.createElement('div');
@@ -51,7 +51,7 @@ function displayMovies(movies) {
     innerSliderContainer.innerHTML = `
           <img src="${poster}"/>
         `;
-    slider.appendChild(innerSliderContainer);
+    sliderContainer.appendChild(innerSliderContainer);
   });
 }
 
@@ -60,3 +60,4 @@ async function main() {
   displayMovies(movies);
 }
 main();
+

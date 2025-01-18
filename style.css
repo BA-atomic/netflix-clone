@@ -175,27 +175,28 @@ h2 {
   pointer-events: none;
 }
 
-.slider-container {
+.slider-outer-container {
+  width: 75%;
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  margin: 0 14rem;
 }
 
-.slider {
+.slider-container {
+  width: 100%;
   display: flex;
-  align-items: center;
   gap: 5rem;
   overflow-x: auto;
   padding: 1rem;
-  scrollbar-width: none; /* Firefox */
 }
 
-.slider::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+.slider-container::-webkit-scrollbar {
+  display: none;
 }
 
 .image-div {
-  width: 19rem;
+  /* width: 20%; */
+  width: 18rem;
+  height: 25rem;
   flex-shrink: 0;
 }
 
@@ -209,12 +210,13 @@ h2 {
 .next-btn {
   position: absolute;
   top: 50%;
-  right: -4rem;
+  right: -3.5rem;
   width: 2.4rem;
   height: 12.8rem;
   background-color: #141414;
   transform: translateY(-50%);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.3s ease;
 }
 
 .next-btn:hover,
