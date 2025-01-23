@@ -1,6 +1,8 @@
-const slider = document.querySelector('.slider');
 const sliderContainer = document.querySelector('.slider-container');
 const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const sliderOuterContainer = document.querySelector('.slider-outer-container');
+let currentTranslateX = 0;
 
 async function fetchData() {
   const randomNumber = Math.floor(Math.random() * 500) + 1;
@@ -20,9 +22,7 @@ async function fetchData() {
   const allMovies = response.data.results;
   const tenMovies = getTenRandomMovies(allMovies, 10);
   return tenMovies;
-  // console.log(tenMovies);
 }
-// fetchData();
 
 function getTenRandomMovies(array, size) {
   const result = [];
@@ -61,3 +61,30 @@ async function main() {
 }
 main();
 
+function moveSlide(amount) {
+  const maxTranslateX =
+    sliderContainer.scrollWidth - sliderOuterContainer.offsetWidth;
+
+  currentTranslateX += amount;
+
+  if (currentTranslateX < 0) {
+    currentTranslateX = 0;
+  } else if (currentTranslateX > maxTranslateX) {
+    currentTranslateX = 0; // Loop back to the start
+  }
+
+  sliderContainer.style.transform = `translateX(-${currentTranslateX}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  moveSlide(200);
+});
+
+prevBtn.addEventListener('click', () => {
+  moveSlide(-200);
+});
+
+
+setInterval(() => {
+  moveSlide(200);
+}, 2000);

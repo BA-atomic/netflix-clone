@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
@@ -70,10 +76,12 @@
             </div>
           </div>
         </div>
-
-        <div class="slider-outer-container">
-          <div class="slider-container"></div>
-          <ion-icon class="next-btn" name="chevron-forward-outline"></ion-icon>
+        <div class="slider-section">
+          <ion-icon class="prev-btn btn" name="chevron-back-outline"></ion-icon>
+          <div class="slider-outer-container">
+            <div class="slider-container"></div>
+          </div>
+          <ion-icon class="next-btn btn" name="chevron-forward-outline"></ion-icon>
         </div>
       </section>
     </main>
