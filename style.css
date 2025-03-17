@@ -139,9 +139,9 @@ h2 {
   margin-bottom: 1.2rem;
 }
 
-.movie-section-text {
-  font-size: 2.6rem;
-  font-weight: 400;
+.section-text {
+  font-size: 2.2rem;
+  font-weight: 600;
   margin-bottom: 1.8rem;
 }
 
@@ -205,6 +205,11 @@ h2 {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.image-div img:hover {
+  transform: scale(1.1);
 }
 
 .btn {
@@ -235,4 +240,51 @@ h2 {
 
 .hidden {
   display: hidden;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.feature {
+  position: relative;
+  border-radius: 1.2rem;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(27, 30, 56, 1) 50%,
+    rgba(255, 77, 77, 0.1)
+  );
+}
+
+.features-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+}
+
+.second-features-text {
+  font-size: 1.6rem;
+  color: #999;
+  line-height: 1.5;
+  margin-bottom: 8rem;
+}
+
+.features-icon {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1rem;
+  fill: rgba(255, 77, 77);
+}
+
+.outline {
+  stroke: rgba(255, 77, 77);
 }
