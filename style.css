@@ -238,10 +238,6 @@ h2 {
   background-color: #333;
 }
 
-.hidden {
-  display: hidden;
-}
-
 .features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -288,3 +284,76 @@ h2 {
 .outline {
   stroke: rgba(255, 77, 77);
 }
+
+.FAQ-section {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.FAQ-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.FAQ-item {
+  margin-top: 0.8rem;
+  background-color: #252525;
+}
+
+.FAQ-question {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 1.8rem;
+}
+
+.FAQ-question p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.FAQ-question:active,
+.FAQ-question:hover {
+  cursor: pointer;
+  background-color: #444;
+}
+
+.FAQ-question p::after {
+  content: '\002B';
+  position: absolute;
+  font-size: 6rem;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.FAQ-question.active p::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.FAQ-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.FAQ-answer .FAQ-answer-text {
+  padding: 2rem;
+  border-top: 1px solid #000;
+}
+
+.FAQ-content {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.FAQ-content:first-child {
+  margin-top: 0;
+}
+
+/* .FAQ-question.active + .FAQ-answer {
+  max-height: 200px;
+} */

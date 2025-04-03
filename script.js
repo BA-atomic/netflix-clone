@@ -4,6 +4,27 @@ const prevBtn = document.querySelector('.prev-btn');
 const sliderOuterContainer = document.querySelector('.slider-outer-container');
 let currentTranslateX = 0;
 
+const faqQuestions = document.querySelectorAll('.FAQ-question');
+
+faqQuestions.forEach((faqQuestion) => {
+  faqQuestion.addEventListener('click', (event) => {
+    const openFaqQuestion = document.querySelector('.FAQ-question.active');
+    if (openFaqQuestion && openFaqQuestion !== faqQuestion) {
+      openFaqQuestion.classList.toggle('active');
+      openFaqQuestion.nextElementSibling.style.maxHeight = 0;
+    }
+
+    faqQuestion.classList.toggle('active');
+    const faqAnswer = faqQuestion.nextElementSibling;
+
+    if (faqQuestion.classList.contains('active')) {
+      faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+    } else {
+      faqAnswer.style.maxHeight = 0;
+    }
+  });
+});
+
 async function fetchData() {
   const randomNumber = Math.floor(Math.random() * 500) + 1;
   const response = await axios.get(
@@ -83,7 +104,6 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   moveSlide(-200);
 });
-
 
 setInterval(() => {
   moveSlide(200);
