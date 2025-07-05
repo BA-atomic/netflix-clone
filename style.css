@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Helvetica Neue", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
   background-color: #000;
   color: #fff;
 }
@@ -17,7 +17,7 @@ body {
 header {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(images/background-image.jpg);
+    url(images/Netflix-background-image.jpg);
   background-size: cover;
 }
 
@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 3.2rem;
-  padding: 1.2rem 0;
+  padding: 0 0 1.2rem 0;
 }
 
 .netflix-logo {
@@ -129,13 +129,14 @@ h2 {
 }
 
 .movie-section {
-  padding: 4.8rem 0 3.2rem 0;
+  padding: 4.8rem 0 8.4rem 0;
+  margin: 0 auto;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 77%;
   margin-bottom: 1.2rem;
+  margin: 0 auto;
 }
 
 .section-text {
@@ -148,17 +149,16 @@ h2 {
   display: flex;
   align-items: center;
   gap: 3rem;
+  margin-bottom: 1.2rem;
 }
 
 .select {
-  width: 100%;
-  padding: 1rem;
-  background-color: #141414;
+  background-color: #131313;
   color: #fff;
   font-size: 1.6rem;
   border-radius: 0.5rem;
   appearance: none;
-  padding-right: 2.5rem;
+  padding: 0.5rem 5rem 0.5rem 0.5rem;
 }
 
 .select-container {
@@ -222,19 +222,24 @@ h2 {
 
 .prev-btn {
   top: 50%;
-  left: 11%;
+  left: 12%;
   transform: translateY(-50%);
 }
 
 .next-btn {
   top: 50%;
-  right: 11%;
+  right: 12%;
   transform: translateY(-50%);
 }
 
 .next-btn:hover,
 .nextBtn:active {
   background-color: #333;
+}
+
+.features-section {
+  padding: 0 0 8.4rem 0;
+  margin: 0 auto;
 }
 
 .features {
@@ -265,9 +270,10 @@ h2 {
 
 .second-features-text {
   font-size: 1.6rem;
-  color: #999;
-  line-height: 1.5;
+  color: #d9d9d9;
+  line-height: 1.2;
   margin-bottom: 8rem;
+  font-weight: 500;
 }
 
 .features-icon {
@@ -285,16 +291,18 @@ h2 {
 }
 
 .FAQ-section {
-  padding: 4.8rem 0 0 0;
+  padding: 0 0 8.4rem 0;
+  margin: 0 auto;
 }
 
 .FAQ-text {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 600;
+  padding-bottom: 0.5rem;
 }
 
 .FAQ-item {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   background-color: #252525;
 }
 
@@ -302,11 +310,11 @@ h2 {
   position: relative;
   display: flex;
   width: 100%;
-  padding: 1.8rem;
+  padding: 2.4rem;
 }
 
 .FAQ-question p {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -358,7 +366,8 @@ h2 {
 } */
 
 .second-cta-section {
-  padding: 4.8rem 0 0 0;
+  padding: 0 0 7.2rem 0;
+  margin: 0 auto;
 }
 
 .cta-container{
@@ -375,7 +384,8 @@ h2 {
 }
 
 .footer-section {
-    padding: 4.8rem 0 0 0;
+  padding: 0 0 12.6rem 0;
+  margin: 0 auto;
 }
 
 .container footer-container {
@@ -419,4 +429,48 @@ color: #e5dddd;
 
 .footer-links a:hover, .footer-links a:active  {
   color: #888;
+}
+
+.footer-p {
+  font-size: 1.4rem;
+  margin-top: 4rem;
+}
+
+#auth-p {
+  color: #999;
+}
+
+#auth-p a:link, #auth-p a:visited  {
+  color: rgb(55, 55, 250);
+}
+
+.footer-first-sign {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 8px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.footer-select-container {
+  position: relative;
+}
+
+.footer-select {
+  background-color: #131313;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  appearance: none;
+  padding: 0.6rem 3rem;
+}
+
+.footer-second-sign {
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  font-size: 8px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
