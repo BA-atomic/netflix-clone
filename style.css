@@ -262,17 +262,17 @@ h2 {
 }
 
 .features-text {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.2;
   margin-bottom: 1.8rem;
 }
 
 .second-features-text {
-  font-size: 1.6rem;
-  color: #d9d9d9;
+  font-size: 1.7rem;
+  color: #999;
   line-height: 1.2;
-  margin-bottom: 8rem;
+  margin-bottom: 9rem;
   font-weight: 500;
 }
 
@@ -280,9 +280,9 @@ h2 {
   position: absolute;
   bottom: 0;
   right: 2rem;
-  width: 6rem;
-  height: 6rem;
-  margin-bottom: 1rem;
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1.8rem;
   fill: rgba(255, 77, 77);
 }
 
