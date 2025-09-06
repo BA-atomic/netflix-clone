@@ -24,6 +24,7 @@ async function fetchData() {
   const allMovies = response.data.results;
   const tenMovies = getTenRandomMovies(allMovies, 10);
   return tenMovies;
+  console.log(response.data)
 }
 
 function getTenRandomMovies(array, size) {
@@ -51,7 +52,7 @@ function displayMovies(movies) {
       : 'https://via.placeholder.com/200x300?text=No+Image';
 
     innerSliderContainer.innerHTML = `
-          <img src="${poster}"/>
+          <img alt="${movie.title}" src="${poster}"/>
         `;
     sliderContainer.appendChild(innerSliderContainer);
   });
