@@ -1,0 +1,70 @@
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-container {
+  animation: slideDown 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header-first-p,
+.header-second-p,
+.form {
+  animation: show 3s ease forwards;
+}
+
+.FAQ-item {
+  animation: show 2s ease forwards;
+}
+
+.FAQ-item {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.FAQ-item.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feature {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.feature.in-view {
+  opacity: 1;
+  transform: scale(1);
+}

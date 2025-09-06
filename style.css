@@ -45,11 +45,14 @@ header {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .sign-in-btn:hover,
 .sign-in-btn:active {
   background-color: #c50812;
+  transform: translateY(-5px);
+
 }
 
 .header-text-container {
