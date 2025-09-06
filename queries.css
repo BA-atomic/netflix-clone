@@ -111,6 +111,10 @@
 
 /* small tablets (≤768px) */
 @media (max-width: 808px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+
   .inner-container {
     width: 90%;
   }
@@ -147,10 +151,6 @@
 
 /* Small Mobile (≤576px) */
 @media (max-width: 576px) {
-  h2 {
-    font-size: 2.4rem;
-  }
-
   .header-text-container {
     padding: 2rem 1rem;
   }
@@ -161,5 +161,11 @@
 
   .slider-outer-container {
     width: 68%;
+  }
+}
+
+@media (max-width: 334px) {
+  .header-text-container {
+    padding: 6rem 1rem;
   }
 }
