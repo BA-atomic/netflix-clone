@@ -1,0 +1,165 @@
+/* (Desktop-first, >1200px) */
+@media (min-width: 1201px) {
+  h2 {
+    font-size: 5.6rem;
+  }
+
+  .header-text-container {
+    padding: 5rem 2rem;
+  }
+
+  .image-div {
+    flex: 0 0 auto;
+    width: min(200px, 20vw);
+    height: auto;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+/* 🖥 Large Tablets & Small Desktops (≤1200px) */
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  .nav-container {
+    width: 90%;
+  }
+
+  .image-div {
+    flex: 0 0 auto;
+    width: min(150px, 20vw);
+    height: auto;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-links ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets (≤992px) */
+@media (max-width: 992px) {
+  .nav-container {
+    width: 95%;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .netflix-logo {
+    width: 12rem;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .inner-container {
+    width: 80%;
+  }
+
+  .prev-btn {
+    left: 5%;
+  }
+
+  .next-btn {
+    right: 5%;
+  }
+
+  .slider-outer-container {
+    width: 82%;
+  }
+
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .features-text {
+    font-size: 2rem;
+  }
+
+  .second-features-text {
+    font-size: 1.6rem;
+  }
+
+  .FAQ-text,
+  .FAQ-question p,
+  .FAQ-content {
+    font-size: 1.8rem;
+  }
+
+  .footer-links ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* small tablets (≤768px) */
+@media (max-width: 808px) {
+  .inner-container {
+    width: 90%;
+  }
+
+  .form {
+    display: block;
+  }
+
+  .form input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1.4rem;
+  }
+
+  .slider-outer-container {
+    width: 77%;
+  }
+
+  .prev-btn {
+    left: 6%;
+  }
+
+  .next-btn {
+    right: 6%;
+  }
+
+  .image-div {
+    width: min(120px, 40vw);
+  }
+}
+
+/* Small Mobile (≤576px) */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .header-text-container {
+    padding: 2rem 1rem;
+  }
+
+  .image-div {
+    width: min(80px, 40vw);
+  }
+
+  .slider-outer-container {
+    width: 68%;
+  }
+}

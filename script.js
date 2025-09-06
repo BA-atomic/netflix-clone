@@ -6,25 +6,6 @@ let currentTranslateX = 0;
 
 const faqQuestions = document.querySelectorAll('.FAQ-question');
 
-faqQuestions.forEach((faqQuestion) => {
-  faqQuestion.addEventListener('click', (event) => {
-    const openFaqQuestion = document.querySelector('.FAQ-question.active');
-    if (openFaqQuestion && openFaqQuestion !== faqQuestion) {
-      openFaqQuestion.classList.toggle('active');
-      openFaqQuestion.nextElementSibling.style.maxHeight = 0;
-    }
-
-    faqQuestion.classList.toggle('active');
-    const faqAnswer = faqQuestion.nextElementSibling;
-
-    if (faqQuestion.classList.contains('active')) {
-      faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
-    } else {
-      faqAnswer.style.maxHeight = 0;
-    }
-  });
-});
-
 async function fetchData() {
   const randomNumber = Math.floor(Math.random() * 500) + 1;
   const response = await axios.get(
@@ -82,29 +63,46 @@ async function main() {
 }
 main();
 
-function moveSlide(amount) {
+function moveSlide(step) {
+  const item = document.querySelector('.image-div');
+  if (!item) return;
+
+  const itemWidth = item.offsetWidth + 16; // account for margin/gap
   const maxTranslateX =
     sliderContainer.scrollWidth - sliderOuterContainer.offsetWidth;
 
-  currentTranslateX += amount;
+  currentTranslateX += step * itemWidth;
 
   if (currentTranslateX < 0) {
     currentTranslateX = 0;
   } else if (currentTranslateX > maxTranslateX) {
-    currentTranslateX = 0; // Loop back to the start
+    currentTranslateX = 0; // loop back to start
   }
 
   sliderContainer.style.transform = `translateX(-${currentTranslateX}px)`;
 }
 
-nextBtn.addEventListener('click', () => {
-  moveSlide(200);
-});
+nextBtn.addEventListener('click', () => moveSlide(1));
+prevBtn.addEventListener('click', () => moveSlide(-1));
 
-prevBtn.addEventListener('click', () => {
-  moveSlide(-200);
-});
+setInterval(() => moveSlide(1), 3000);
 
-setInterval(() => {
-  moveSlide(200);
-}, 2000);
+
+faqQuestions.forEach((faqQuestion) => {
+  faqQuestion.addEventListener('click', (event) => {
+    const openFaqQuestion = document.querySelector('.FAQ-question.active');
+    if (openFaqQuestion && openFaqQuestion !== faqQuestion) {
+      openFaqQuestion.classList.toggle('active');
+      openFaqQuestion.nextElementSibling.style.maxHeight = 0;
+    }
+
+    faqQuestion.classList.toggle('active');
+    const faqAnswer = faqQuestion.nextElementSibling;
+
+    if (faqQuestion.classList.contains('active')) {
+      faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+    } else {
+      faqAnswer.style.maxHeight = 0;
+    }
+  });
+});

@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 3.2rem;
-  padding: 0 0 1.2rem 0;
+  padding-top: 1.4rem;
 }
 
 .netflix-logo {
@@ -57,29 +57,28 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
+  padding: 10rem 10rem;
   text-align: center;
 }
 
 .inner-container {
   width: 70%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  height: 50vh;
 }
 
 h2 {
-  font-size: 5.2rem;
+  font-size: 5.4rem;
   font-weight: 900;
   line-height: 1.2;
-}
-
-.header-second-text {
   margin-bottom: 1.2rem;
 }
 
 .header-first-p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 3rem;
   font-weight: 600;
 }
@@ -105,18 +104,19 @@ h2 {
   border-radius: 0.5rem;
   padding: 2rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: #e4dbdb;
 }
 
 .cta-button {
   background-color: #e50914;
   border: none;
   border-radius: 0.5rem;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: #fff;
   transition: background-color 0.3s ease;
-  padding: 2rem;
+  padding: 1.8rem 2rem;
+  cursor: pointer;
 }
 
 .cta-button:hover,
@@ -140,7 +140,7 @@ h2 {
 }
 
 .section-text {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 1.8rem;
 }
@@ -166,7 +166,7 @@ h2 {
 }
 
 .select-container::after {
-  content: '▼';
+  content: "▼";
   position: absolute;
   top: 50%;
   right: 10px;
@@ -194,9 +194,9 @@ h2 {
 }
 
 .image-div {
-  width: 18rem;
-  height: 25rem;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  width: min(200px, 40vw); /* scales down on small screens */
+  height: auto;
 }
 
 .image-div img {
@@ -262,14 +262,14 @@ h2 {
 }
 
 .features-text {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.8rem;
 }
 
 .second-features-text {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: #999;
   line-height: 1.2;
   margin-bottom: 9rem;
@@ -296,7 +296,7 @@ h2 {
 }
 
 .FAQ-text {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
@@ -314,7 +314,7 @@ h2 {
 }
 
 .FAQ-question p {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -326,7 +326,7 @@ h2 {
 }
 
 .FAQ-question p::after {
-  content: '\002B';
+  content: "\002B";
   position: absolute;
   font-size: 6rem;
   right: 2rem;
@@ -351,7 +351,7 @@ h2 {
 }
 
 .FAQ-content {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 1.5;
   font-weight: 400;
   margin-top: 2rem;
@@ -370,7 +370,7 @@ h2 {
   margin: 0 auto;
 }
 
-.cta-container{
+.cta-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -399,15 +399,17 @@ h2 {
   color: #999;
 }
 
-.contact-link a{
+.contact-link a {
   font-size: 1.4rem;
 }
 
-.contact-link a:link, .contact-link a:visited  {
+.contact-link a:link,
+.contact-link a:visited {
   color: #e5dddd;
 }
 
-.contact-link a:hover, .contact-link a:active  {
+.contact-link a:hover,
+.contact-link a:active {
   color: #888;
 }
 
@@ -422,12 +424,13 @@ h2 {
   margin: 4.2rem 0 6rem 0;
 }
 
-.footer-links a:link, .footer-links a:visited  {
-color: #e5dddd;
-
+.footer-links a:link,
+.footer-links a:visited {
+  color: #e5dddd;
 }
 
-.footer-links a:hover, .footer-links a:active  {
+.footer-links a:hover,
+.footer-links a:active {
   color: #888;
 }
 
@@ -440,7 +443,8 @@ color: #e5dddd;
   color: #999;
 }
 
-#auth-p a:link, #auth-p a:visited  {
+#auth-p a:link,
+#auth-p a:visited {
   color: rgb(55, 55, 250);
 }
 
